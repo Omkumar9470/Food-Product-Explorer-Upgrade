@@ -2,12 +2,17 @@ import { NextResponse } from 'next/server';
 
 async function fetchWithRetry(url: string, retries = 3): Promise<Response> {
   for (let i = 0; i < retries; i++) {
-    const response = await fetch(url, {
-      headers: { 'User-Agent': 'FoodExplorer/1.0' },
-      cache: 'no-store',
-    });
-    if (response.ok) return response;
-    if (i < retries - 1) await new Promise((r) => setTimeout(r, 1000));
+    try {
+      const response = await fetch(url, {
+        headers: { 'User-Agent': 'FoodExplorer/1.0' },
+        cache: 'no-store',
+        signal: AbortSignal.timeout(10000), // 10 second timeout
+      });
+      if (response.ok) return response;
+    } catch (err) {
+      console.error(`Attempt ${i + 1} failed:`, err);
+    }
+    if (i < retries - 1) await new Promise((r) => setTimeout(r, 2000));
   }
   throw new Error('All retries failed');
 }

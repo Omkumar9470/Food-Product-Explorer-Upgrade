@@ -1,8 +1,9 @@
 import { Product, NutritionValues } from '@/types';
 
 const getBaseUrl = () => {
-  if (typeof window !== 'undefined') return '';
-  return 'http://localhost:3000';
+  if (typeof window !== 'undefined') return ''; // browser
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // Vercel
+  return 'http://localhost:3000'; // local dev
 };
 
 function mapProduct(item: any): Product | null {
