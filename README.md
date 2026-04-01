@@ -129,7 +129,7 @@ Since OpenFoodFacts is a free community-run API, it occasionally returns 503 err
 
 ## ⏱️ Time Taken
 
-> Approximately X hours
+> Approximately 2 hours
 
 ## 📄 License
 
