@@ -9,10 +9,10 @@ https://food-product-explorer-upgrade.vercel.app/
 
 ## 📸 Screenshots
 
-> (./public/SS1.png)
-> (./public/SS2.png)
-> (./public/SS3.png)
-> (./public/SS4.png)
+> ./public/SS1.png
+> ./public/SS2.png
+> ./public/SS3.png
+> ./public/SS4.png
 
 ## ✨ Features
 
