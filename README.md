@@ -6,6 +6,12 @@ A modern web application to search, filter, and explore food products with detai
 
 https://food-product-explorer-upgrade.vercel.app/
 
+
+## 📸 Screenshots
+
+> (./public/SS1.png)
+> (./public/SS2.png)
+
 ## ✨ Features
 
 - **Product Listing** — Browse thousands of real food products with images, categories and nutrition grades
